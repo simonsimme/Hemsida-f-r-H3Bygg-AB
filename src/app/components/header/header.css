@@ -1,0 +1,22 @@
+.Black {
+  background-color: black;
+}
+.Gray{
+  background-color: #6E7170;
+}
+.Orange{
+  background-color: #F36B1C;
+}
+.DOrange{
+  background-color: #EA3E1E;
+}
+.color-bars {
+  display: flex;
+  flex-direction: column;
+  width: 80px; /* Adjust as needed to reach under the logo */
+  height: 100%;
+}
+.color-bars > div {
+  margin: 0;
+  padding: 0;
+}
