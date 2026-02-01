@@ -3,3 +3,102 @@
   height: 3px;
   background-color: #ee4e01; /* H3 orange */
 }
+.Gray{
+  background-color: lightgray;
+}
+.Orange{
+  background-color: #ee4e01;
+}
+.DOrange{
+  background-color: #ec3900;
+}
+.borderorg {
+  border: 1.5px solid #ec3900 !important;
+}
+.projects-section .btn-outline-primary {
+  color: #ee4e01;
+  border-color: #ee4e01;
+  background-color: transparent;
+  transition: background-color .12s ease, color .12s ease, box-shadow .12s ease;
+}
+
+.projects-section .btn-outline-primary:hover,
+.projects-section .btn-outline-primary:focus {
+  color: #ffffff;
+  background-color: #ee4e01;
+  border-color: #ee4e01;
+  box-shadow: 0 2px 6px rgba(238,78,1,0.18);
+}
+
+.projects-section .btn-outline-primary:active {
+  background-color: #ec3900;
+  border-color: #ec3900;
+  color: #fff;
+}
+
+
+/* ensure disabled state looks correct */
+.projects-section .btn-outline-primary.disabled,
+.projects-section .btn-outline-primary:disabled {
+  color: rgba(238,78,1,0.5);
+  border-color: rgba(238,78,1,0.35);
+  background-color: transparent;
+}
+
+.project-thumb {
+  height: 220px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.project-thumb img.object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.modal-img {
+  max-height: 70vh;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .project-thumb { height: 180px; }
+}
+
+.section-accent {
+  width: 60px;
+  height: 3px;
+  background-color: #ee4e01; /* H3 orange */
+}
+.carousel-control-prev-icon{
+  /* enkel chevron SVG som använder currentColor för stroke */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'><path stroke='%23ee4e01' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 14L5 8l6-6'/></svg>") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4rem 4rem;
+  width: 6rem;
+  height: 6rem;
+  filter: none !important;
+  opacity: 1 !important;
+}
+.carousel-control-next-icon {
+  /* enkel chevron SVG som använder currentColor för stroke */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'><path stroke='%23ee4e01' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4rem 4rem;
+  width: 12rem;
+  height: 12rem;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* valfri: mild hover-effekt */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0.95);
+}
+/* ...existing code... */
