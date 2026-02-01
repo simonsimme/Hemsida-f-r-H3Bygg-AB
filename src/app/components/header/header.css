@@ -10,13 +10,79 @@
 .DOrange{
   background-color: #ec3900;
 }
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .color-bars {
-  display: flex;
-  flex-direction: column;
-  width: 80px; /* Adjust as needed to reach under the logo */
-  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100% + 3px);
+  width: 80px;
+}
+.cOrange{
+  color: #ec3900;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(236,57,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 .color-bars > div {
   margin: 0;
   padding: 0;
+}
+.custom-navbar {
+  background-color: #000;
+  border-bottom: 3px solid #ec3900; 
+}
+.logo-wrap {
+  height: 68px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100%;          
+  width: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brand-text {
+  color: #f05a00;
+  font-size: 1.25rem;
+}
+
+.custom-navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #f05a00;
+}
+
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #f05a00;
+  transition: width 0.2s ease-in-out;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  width: 100%;
 }
