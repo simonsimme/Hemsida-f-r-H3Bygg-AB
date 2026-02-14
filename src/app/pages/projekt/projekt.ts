@@ -13,13 +13,23 @@ export class Projekt {
   projects = [
     {
       folder: 'altan',
-      title: 'Altaner',
-      description: 'Utomhus rum, altan och trädgård.',
+      title: 'Altaner och Utomhusbyggen',
+      description: 'Skräddarsydda altaner och trädäck för utomhusbruk.',
       // exact filenames found in src/assets/images/altan
-      images: [ '450.jpg', '451.jpg', '452.jpg', '453.jpg', '454.jpg', '455.jpg', '456.jpg', '457.jpg', '458.jpg', '459.jpg'],
+      images: ['449.jpg', '450.jpg', '451.jpg', '452.jpg', '453.jpg', '454.jpg', '455.jpg', '456.jpg', '457.jpg', '458.jpg', '459.jpg'],
     },
-    { folder: 'utehus', title: 'Utehus', description: 'Utehus och förråd.', images: ["446.jpg", "447.jpg", "448.jpg"] },
-    { folder: 'växthus', title: 'Växthus', description: 'Växthus för odling av växter.', images: ["440.jpg", "441.jpg", "442.jpg", "443.jpg", "444.jpg", "445.jpg"] },
+    { 
+      folder: 'utehus', 
+      title: 'Utehus och Förråd', 
+      description: 'Funktionella förråd och utehus för förvaring.', 
+      images: ["446.jpg", "447.jpg", "448.jpg"] 
+    },
+    { 
+      folder: 'växthus', 
+      title: 'Växthus och Odling', 
+      description: 'Moderna växthus för din trädgårdsodling.', 
+      images: ["440.jpg", "441.jpg", "442.jpg", "443.jpg", "444.jpg", "445.jpg"] 
+    },
   ];
 
   getImages(p: { folder: string; imageCount?: number; images?: string[] }): string[] {

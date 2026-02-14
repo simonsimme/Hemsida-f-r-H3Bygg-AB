@@ -1,25 +1,88 @@
-.section-accent {
-  width: 60px;
-  height: 3px;
-  background-color: #ee4e01; /* H3 orange */
-}
-.Gray{
+/* Color Classes */
+.Gray {
   background-color: lightgray;
 }
-.Orange{
+
+.Orange {
   background-color: #ee4e01;
 }
-.DOrange{
+
+.DOrange {
   background-color: #ec3900;
 }
-.borderorg {
-  border: 1.5px solid #ec3900 !important;
+
+/* Page Header */
+.page-header {
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
+
+.section-accent {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ee4e01 0%, #ec3900 100%);
+  border-radius: 2px;
+}
+
+/* Project Cards */
+.projects-section .project-card {
+  border: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.projects-section .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.borderorg {
+  border: 2px solid #ee4e01 !important;
+}
+
+.project-thumb {
+  height: 250px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.project-thumb::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-thumb::after {
+  opacity: 1;
+}
+
+.project-thumb img.object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.1);
+}
+
+/* Buttons */
 .projects-section .btn-outline-primary {
   color: #ee4e01;
   border-color: #ee4e01;
   background-color: transparent;
-  transition: background-color .12s ease, color .12s ease, box-shadow .12s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .projects-section .btn-outline-primary:hover,
@@ -27,7 +90,8 @@
   color: #ffffff;
   background-color: #ee4e01;
   border-color: #ee4e01;
-  box-shadow: 0 2px 6px rgba(238,78,1,0.18);
+  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
+  transform: translateY(-2px);
 }
 
 .projects-section .btn-outline-primary:active {
@@ -36,69 +100,86 @@
   color: #fff;
 }
 
-
-/* ensure disabled state looks correct */
 .projects-section .btn-outline-primary.disabled,
 .projects-section .btn-outline-primary:disabled {
-  color: rgba(238,78,1,0.5);
-  border-color: rgba(238,78,1,0.35);
+  color: rgba(238, 78, 1, 0.5);
+  border-color: rgba(238, 78, 1, 0.35);
   background-color: transparent;
 }
 
-.project-thumb {
-  height: 220px;
-  overflow: hidden;
-  background-color: #f5f5f5;
-}
-
-.project-thumb img.object-fit-cover {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  display: block;
-}
-
+/* Modal */
 .modal-img {
   max-height: 70vh;
   object-fit: contain;
   width: 100%;
+  border-radius: 8px;
 }
 
-@media (max-width: 767px) {
-  .project-thumb { height: 180px; }
+.modal-content {
+  border-radius: 16px;
+  border: none;
 }
 
-.section-accent {
-  width: 60px;
-  height: 3px;
-  background-color: #ee4e01; /* H3 orange */
+.modal-header {
+  border-bottom: 2px solid #f0f0f0;
+  background: #f8f9fa;
 }
-.carousel-control-prev-icon{
-  /* enkel chevron SVG som använder currentColor för stroke */
+
+.modal-footer {
+  border-top: 2px solid #f0f0f0;
+  background: #f8f9fa;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'><path stroke='%23ee4e01' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 14L5 8l6-6'/></svg>") !important;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 4rem 4rem;
-  width: 6rem;
-  height: 6rem;
-  filter: none !important;
-  opacity: 1 !important;
-}
-.carousel-control-next-icon {
-  /* enkel chevron SVG som använder currentColor för stroke */
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'><path stroke='%23ee4e01' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>") !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 4rem 4rem;
-  width: 12rem;
-  height: 12rem;
+  background-size: 2.5rem 2.5rem;
+  width: 3rem;
+  height: 3rem;
   filter: none !important;
   opacity: 1 !important;
 }
 
-/* valfri: mild hover-effekt */
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'><path stroke='%23ee4e01' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2.5rem 2.5rem;
+  width: 3rem;
+  height: 3rem;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
-  filter: brightness(0.95);
+  filter: drop-shadow(0 2px 4px rgba(238, 78, 1, 0.4));
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
-/* ...existing code... */
+
+/* Responsive */
+@media (max-width: 767px) {
+  .project-thumb {
+    height: 200px;
+  }
+}
+
+/* Button Styles */
+.btn-orange {
+  background-color: #ee4e01;
+  border-color: #ee4e01;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ec3900;
+  border-color: #ec3900;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
+}

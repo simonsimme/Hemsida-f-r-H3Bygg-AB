@@ -1,38 +1,46 @@
-<section class="projects-section py-5">
+<!-- Page Header -->
+<section class="page-header bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-semibold mb-2">Projekt</h2>
-      <div class="section-accent mx-auto mb-2"></div>
-      <p class="text-muted mb-0">
+    <div class="text-center">
+      <h1 class="fw-bold mb-3">Våra Projekt</h1>
+      <div class="section-accent mx-auto mb-3"></div>
+      <p class="lead text-muted mb-0">
         Här finns våra avklarade projekt samlade för inspiration och referens
       </p>
     </div>
+  </div>
+</section>
 
-    <div class="row g-4 ">
-      <div class="col-md-6 col-lg-4 " *ngFor="let p of projects; let i = index">
-        <div class="card project-card h-100 shadow-sm borderorg">
-          <div class="card-img-top project-thumb " (click)="null" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-' + i" style="cursor:pointer;">
+<!-- Projects Gallery -->
+<section class="projects-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let p of projects; let i = index">
+        <div class="card project-card h-100 shadow-sm">
+          <div class="card-img-top project-thumb" (click)="null" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-' + i" style="cursor:pointer;">
             <img [src]="getImages(p)[0]" (error)="onImgError($event)" alt="{{p.title}}" class="img-fluid w-100 h-100 object-fit-cover">
           </div>
-          <div class="card-body d-flex  flex-column">
-            <h5 class="card-title">{{p.title}}</h5>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">{{p.title}}</h5>
             <p class="card-text text-muted small mb-3">{{p.description}}</p>
             <div class="mt-auto d-flex justify-content-between align-items-center">
-              <small class="text-muted">{{ (p.images.length) || 0 }} bilder</small>
-              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-' + i">Visa galleri</button>
+              <small class="text-muted"><strong>{{ (p.images.length) || 0 }}</strong> bilder</small>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" [attr.data-bs-target]="'#modal-' + i">
+                Visa galleri
+              </button>
             </div>
           </div>
         </div>
 
         <!-- Modal with carousel -->
-        <div class="modal fade " tabindex="-1" role="dialog" [attr.id]="'modal-' + i" aria-hidden="true">
-          <div class="modal-dialog modal-xl modal-dialog-centered " role="document">
-            <div class="modal-content Gray">
+        <div class="modal fade" tabindex="-1" role="dialog" [attr.id]="'modal-' + i" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title">{{p.title}}</h5>
+                <h5 class="modal-title fw-bold">{{p.title}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Stäng"></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body p-0">
                 <div id="carousel-{{i}}" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item" *ngFor="let img of getImages(p); let j = index" [class.active]="j === 0">
@@ -50,7 +58,8 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Stäng</button>
+                <small class="text-muted me-auto">{{p.description}}</small>
+                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-dismiss="modal">Stäng</button>
               </div>
             </div>
           </div>
@@ -60,19 +69,22 @@
     </div>
   </div>
 </section>
-<div class="row mt-5">
-  <div class="col text-center">
-    <p class="text-muted small mx-auto" style="max-width: 800px;">
-      Samtliga projekt utförs enligt gällande branschregler och i nära dialog
-      med kund. Vi lägger stor vikt vid planering, tydlig kommunikation och ett
-      slutresultat som håller över tid.
-    </p>
+
+<!-- Info Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h3 class="fw-bold mb-3">Professionellt hantverkskap</h3>
+        <p class="text-muted mb-4">
+          Samtliga projekt utförs enligt gällande branschregler och i nära dialog
+          med kund. Vi lägger stor vikt vid planering, tydlig kommunikation och ett
+          slutresultat som håller över tid.
+        </p>
+        <a href="/kontakt" class="btn btn-orange btn-lg px-5">
+          Kontakta oss för offert eller frågor
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-<div class="row mt-4 projects-section">
-  <div class="col text-center">
-    <a href="/kontakt" class="btn btn-outline-primary">
-      Kontakta oss för offert eller frågor
-    </a>
-  </div>
-</div>
+</section>

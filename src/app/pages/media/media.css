@@ -1,5 +1,157 @@
+/* Page Header */
+.page-header {
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
 .section-accent {
   width: 60px;
-  height: 3px;
-  background-color: #ee4e01; /* H3 orange */
+  height: 4px;
+  background: linear-gradient(90deg, #ee4e01 0%, #ec3900 100%);
+  border-radius: 2px;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Orange Header */
+.bg-gradient-orange {
+  background: linear-gradient(135deg, #ee4e01 0%, #ec3900 100%);
+}
+
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Social Icon */
+.social-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ee4e01;
+}
+
+/* Feature Boxes */
+.feature-box {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.feature-icon-small {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #ee4e01 0%, #ec3900 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+}
+
+/* Stats Cards */
+.stat-card {
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(238, 78, 1, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ee4e01 0%, #ec3900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #6c757d;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-orange {
+  background-color: #ee4e01;
+  border-color: #ee4e01;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ec3900;
+  border-color: #ec3900;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 78, 1, 0.3);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(238, 78, 1, 0.1) 0%, rgba(236, 57, 0, 0.1) 100%);
+}
+
+/* Facebook iframe */
+iframe {
+  border-radius: 0 0 12px 12px;
+}
+
+/* Links */
+a {
+  color: #ee4e01;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #ec3900;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .page-header {
+    padding: 40px 0 30px;
+  }
 }
