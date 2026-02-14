@@ -63,7 +63,8 @@
 .custom-navbar .nav-link {
   color: #fff;
   font-weight: 500;
-
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
 }
 
 .custom-navbar .nav-link:hover,

@@ -9,7 +9,7 @@
         </h1>
         <p class="lead text-white-90 mb-4">
           Din pålitliga partner för byggnation, renovering och snickeriarbeten i Vänersborg och omnejd.
-          Med över 20 års erfarenhet levererar vi kvalitet som håller.
+          Med över 10 års erfarenhet levererar vi kvalitet som håller.
         </p>
         <div class="d-flex gap-3 flex-wrap">
           <a href="/kontakt" class="btn btn-orange btn-lg px-4">
@@ -150,7 +150,7 @@
           <div class="feature-item">
             <div class="feature-check">✓</div>
             <div>
-              <h6 class="fw-semibold mb-1">Över 20 års erfarenhet</h6>
+              <h6 class="fw-semibold mb-1">Över 10 års erfarenhet</h6>
               <p class="text-muted small mb-0">Gedigen kunskap och beprövad kompetens inom byggbranschen</p>
             </div>
           </div>
@@ -180,6 +180,61 @@
       <div class="col-lg-6">
         <div class="image-placeholder">
           <img src="assets/images/altan/450.jpg" alt="H3 Bygg arbete" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Företags klockan start 2015 1 mars, räkna år och månader sedan start -->
+<section class="py-5 bg-dark text-white position-relative overflow-hidden">
+  <div class="digital-clock-bg"></div>
+  <div class="container position-relative">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10">
+        <h2 class="fw-bold mb-2 text-white">Företagsklockan</h2>
+        <div class="section-accent mx-auto mb-4" style="background: linear-gradient(90deg, #ee4e01 0%, #ec3900 100%);"></div>
+        <p class="lead mb-5" style="color: rgba(255, 255, 255, 0.8);">
+          Vi har varit verksamma sedan 1 mars 2015
+        </p>
+        
+        <!-- Digital Clock Display -->
+        <div class="digital-clock-container">
+          <div class="row g-3 justify-content-center">
+            <!-- År -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="digital-segment">
+                <div class="digital-value">{{ years }}</div>
+                <div class="digital-label">ÅR</div>
+              </div>
+            </div>
+            
+            <!-- Månader -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="digital-segment">
+                <div class="digital-value">{{ months }}</div>
+                <div class="digital-label">MÅNADER</div>
+              </div>
+            </div>
+            
+            <!-- Dagar -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="digital-segment">
+                <div class="digital-value">{{ days }}</div>
+                <div class="digital-label">DAGAR</div>
+              </div>
+            </div>
+            
+         
+          </div>
+          
+          <!-- Summary Text -->
+          <div class="mt-5 pt-4 border-top border-secondary">
+            <p class="lead mb-0" style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem;">
+              <span class="text-orange fw-bold">{{ years }} år</span> och 
+              <span class="text-orange fw-bold">{{ months }} månader</span> av kvalitet och engagemang
+            </p>
+          </div>
         </div>
       </div>
     </div>
